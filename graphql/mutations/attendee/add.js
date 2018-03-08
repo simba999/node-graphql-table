@@ -16,7 +16,6 @@ export default {
     }
   },
   async resolve (root, params, options) {
-    console.log('attendee model', params.data);
     const attendeeModel = new AttendeeModel(params.data);
     const newAttendee = await attendeeModel.save();
 
